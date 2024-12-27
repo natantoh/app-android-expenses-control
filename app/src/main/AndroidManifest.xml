@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.brainexpensescontrol.controle_de_despesas">
+
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.NOTIFICATION_POLICY_ACCESS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_icone_app_controle_de_despesas"
+        android:roundIcon="@mipmap/ic_icone_app_controle_de_despesas_round"
+        android:label="@string/app_name"
+        android:configChanges="locale"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Meu_Bloco_De_Notas"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="${admobAppId}" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false"
+            android:label="@string/translate_dados_do_item"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AddActivity"
+            android:exported="false"
+            android:label="@string/translate_adicionar_despesa_ou_receita"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".GastosPorAno"
+            android:exported="false"
+            android:label="@string/translate_despesas_e_receitas_por_ano"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".MeusCartoesDeCredito"
+            android:exported="false"
+            android:label="@string/translate_pag_meus_cartoes_de_cretido_e_debito"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AddCartaoCredito"
+            android:exported="false"
+            android:label="@string/translate_pag_add_cartoes_de_cretido_ou_debito"
+            android:parentActivityName=".MeusCartoesDeCredito"
+            />
+        <activity
+            android:name=".MinhasCategorias"
+            android:exported="false"
+            android:label="@string/translate_pag_minhas_categorias"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AddCategoria"
+            android:exported="false"
+            android:label="@string/translate_pag_adicionar_categorias"
+            android:parentActivityName=".MinhasCategorias"
+            />
+        <activity
+            android:name=".AnotacoesSalvasFiltroCartao"
+            android:exported="false"
+            android:label="@string/translate_pag_filtrando_por_cartao"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AnotacoesSalvasFiltroCategorias"
+            android:exported="false"
+            android:label="@string/translate_pag_filtrando_por_categorias"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AnotacoesSalvasFiltroDespesasFixas"
+            android:exported="false"
+            android:label="@string/translate_pag_filtrando_por_despesas_fixas"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AnotacoesSalvasFiltroHoje"
+            android:exported="false"
+            android:label="@string/translate_pag_filtrando_por_hoje"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AnotacoesSalvasFiltroNaoPagos"
+            android:exported="false"
+            android:label="@string/translate_pag_filtrando_por_itens_nao_pagos"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+
+        <activity
+            android:name=".AnotacoesSalvasFiltroNext7Days"
+            android:exported="false"
+            android:label="@string/translate_pag_filtrando_para_proximos_7_dias"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+
+        <activity
+            android:name=".UpdateCartaoCredito"
+            android:exported="false"
+            android:label="@string/translate_pag_atualizar_cartao_de_credito_ou_debito"
+            android:parentActivityName=".MeusCartoesDeCredito"
+            />
+        <activity
+            android:name=".UpdateCategoria"
+            android:exported="false"
+            android:label="@string/translate_pag_atualizar_ou_excluir_categoria"
+            android:parentActivityName=".MinhasCategorias"
+            />
+        <activity
+            android:name=".SelecaoMoeda"
+            android:exported="false"
+            android:label="@string/translate_pag_selecionar_moeda"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
+            android:name=".AnotacoesSalvas"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

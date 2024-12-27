@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Controle de Despesas</string>
+    <string name="translate_adicionar_despesa_ou_receita">Adicionar Despesa Ou Receita </string>
+    <string name="translate_titulo">Título</string>
+    <string name="translate_descricao">Descrição</string>
+    <string name="translate_preco_total">Preço</string>
+    <string name="translate_adicionar">ADICIONAR</string>
+    <string name="translate_atualizar">ATUALIZAR</string>
+    <string name="translate_deletar">DELETAR</string>
+    <string name="translate_button_confirmar"> CONFIRMAR </string>
+    <string name="translate_total_deste_mes"> Despesa Deste Mês: </string>
+    <string name="translate_total_deste_mes_2"> Despesa Deste Mês:</string>
+    <string name="translate_despesas_pagas_deste_mes"> Despesas Pagas Deste Mês:</string>
+    <string name="translate_total_acumulado_pagos_e_recebidos"> Total Acumulado Considerando Pagos e Recebidos:</string>
+    <string name="translate_receitas_recebidas_deste_mes"> Receitas Recebidas Deste Mês:</string>
+    <string name="translate_falta_pagar_deste_mes"> Líquido Considerando Pagos e Recebidos: </string>
+    <string name="translate_limite_total_todos_cartoes"> Limite Total: </string>
+    <string name="translate_limite_total_todos_cartoes_2"> Limite Total: </string>
+    <string name="translate_limite_total_utilizado_todos_cartoes"> Limite Total Utilizado: </string>
+    <string name="translate_limite_total_utilizado_todos_cartoes2"> Limite Total Utilizado: </string>
+    <string name="translate_limite_total_disponivel_todos_cartoes"> Limite Total Disponível: </string>
+    <string name="translate_limite_total_disponivel_todos_cartoes2"> Limite Total Disponível: </string>
+    <string name="translate_receita_deste_mes"> Receita Deste Mês: </string>
+    <string name="translate_receita_deste_mes2"> Receita Deste Mês: </string>
+    <string name="translate_saldo_liquido_deste_mes"> Saldo Líquido Deste Mês: </string>
+    <string name="translate_saldo_liquido_deste_mes2"> Saldo Líquido Deste Mês: </string>
+    <string name="translate_total_ate_aqui"> Total acumulado até aqui: </string>
+    <string name="translate_total_ate_aqui_2"> Total acumulado até aqui: </string>
+    <string name="translate_gasto_por_ano"> Gastos Por Ano </string>
+    <string name="translate_nao">NÃO</string>
+    <string name="translate_sim">SIM</string>
+    <string name="translate_esta_certo_que_voce_quer_deletar"> Tem certeza que você quer deletar ? </string>
+    <string name="translate_falhou"> Falhou! </string>
+    <string name="translate_adicionado_com_sucesso"> Adicionado com sucesso! </string>
+    <string name="translate_preencha_titulo_ou_descricao"> Pelo menos o título ou a descrição devem ser preenchidos. </string>
+    <string name="translate_preencha_titulo"> O título deve ser preenchido. </string>
+    <string name="translate_preco_nao_pode_ser_vazio_ou_zero"> O preço não pode ser vazio ou zero. </string>
+    <string name="translate_falha_ao_atualizar"> Falha ao atualizar </string>
+    <string name="translate_atualizado_com_sucesso"> Atualizado com sucesso! </string>
+    <string name="translate_falha_ao_deletar"> Falha ao deletar. </string>
+    <string name="translate_deletado_com_sucesso"> Deletado com sucesso! </string>
+    <string name="translate_ponto_ou_virgula">,</string>
+    <string name="translate_numero_de_parcela_nao_pode_ser_zero"> O número de parcela não pode ser zero ou vazio. </string>
+    <string name="translate_o_numero_de_parcela_nao_pode_ser_maior_que_mil">  O número de parcela não pode ser maior que mil. </string>
+    <string name="translate_o_numero_de_parcela_nao_pode_ser_maior_que_600">  O número de parcela não pode ser maior que 600. </string>
+    <string name="translate_meus_cartoes"> Meus Cartões </string>
+    <string name="translate_minhas_categorias"> Minhas Categorias </string>
+    <string name="translate_selecionar_moeda"> Selecionar Moeda </string>
+    <string name="translate_selecionar_despesa_ou_receita"> Selecione Despesa ou Receita </string>
+    <string name="translate_selecionar_cartao_credito_ou_debito"> Selecione Um Cartão De Crédito </string>
+    <string name="translate_selecionar_categoria"> Selecione Uma Categoria </string>
+    <string name="translate_checkbox_nao_parcelar"> Não repetir</string>
+    <string name="translate_checkbox_parcelar"> Repetir </string>
+    <string name="translate_checkbox_fixo"> Fixo </string>
+    <string name="translate_despesas_e_receitas_por_ano"> Despesas e Receitas Por Ano </string>
+    <string name="translate_pag_meus_cartoes_de_cretido_e_debito"> Meus Cartões de Crédito </string>
+    <string name="translate_pag_add_cartoes_de_cretido_ou_debito"> Adicionar Cartão de Crédito </string>
+    <string name="translate_pag_minhas_categorias"> Minhas Categorias </string>
+    <string name="translate_pag_adicionar_categorias"> Adicionar Categoria </string>
+    <string name="translate_pag_filtrando_por_cartao"> Filtrando por Cartão </string>
+    <string name="translate_pag_atualizar_cartao_de_credito_ou_debito"> Atualizar Cartão de Crédito </string>
+    <string name="translate_pag_atualizar_ou_excluir_categoria"> Atualizar ou Excluir Categoria </string>
+    <string name="translate_pag_selecionar_moeda"> Selecionar Moeda </string>
+    <string name="translate_pie_chart_categorias"> Categorias </string>
+    <string name="translate_submenu_filtro_de_cartoes"> Filtro de Cartões </string>
+    <string name="translate_submenu_filtro_categorias"> Filtro Categorias </string>
+    <string name="translate_submenu_filtro_despesas_fixas"> Filtros Despesas Fixas </string>
+    <string name="translate_submenu_filtro_nao_pagos"> Filtro Não Pagos </string>
+    <string name="translate_submenu_filtro_hoje"> Filtro Hoje </string>
+    <string name="translate_submenu_filtro_proximos_7_dias"> Filtro Próximos 7 Dias </string>
+
+
+
+
+
+
+
+
+
+    <string name="translate_menu_pago_recebido"> Pago/Recebido </string>
+    <string name="translate_menu_nao_pago_nao_recebido"> Não Pago/Não Recebido </string>
+    <string name="translate_numero_de_parcela"> Número De Parcelas </string>
+    <string name="translate_despesas"> DESPESAS </string>
+    <string name="translate_receitas"> RECEITAS </string>
+    <string name="translate_saldo"> SALDO </string>
+    <string name="translate_total"> Total </string>
+    <string name="translate_utilizado"> Utilizado </string>
+    <string name="translate_disponivel"> Disponível </string>
+    <string name="translate_nome_do_cartao_de_credito_ou_debito"> Nome do Cartão de Crédito </string>
+    <string name="translate_limite_do_cartao_ou_saldo_cartao_de_debito"> Limite do Cartão de Crédito </string>
+    <string name="translate_salvar_cartao"> SALVAR CARTÃO </string>
+    <string name="translate_salvar"> SALVAR </string>
+    <string name="translate_nome_da_categoria"> NOME DA CATEGORIA </string>
+    <string name="translate_frase_delete_varios_itens"> Essa despesa se repete em outras datas, Deseja excluir quais parcelas ? </string>
+    <string name="translate_apenas_esta"> APENAS ESTA </string>
+    <string name="translate_todas"> TODAS </string>
+    <string name="translate_esta_e_proximas"> ESTA E PRÓXIMAS </string>
+    <string name="translate_categoria_supermercado"> SUPERMERCADO </string>
+    <string name="translate_categoria_comer_fora"> COMER FORA </string>
+    <string name="translate_categoria_viagem"> VIAGEM </string>
+    <string name="translate_categoria_combustivel"> COMBUSTIVEL </string>
+    <string name="translate_categoria_gasto_com_o_carro"> GASTOS COM O CARRO </string>
+    <string name="translate_categoria_festas"> FESTAS </string>
+    <string name="translate_categoria_academia"> ACADEMIA </string>
+    <string name="translate_categoria_conta_de_luz"> CONTA DE LUZ </string>
+    <string name="translate_categoria_pix_com_cartao"> PIX COM CARTÃO </string>
+    <string name="translate_categoria_aluguel"> ALUGUEL </string>
+    <string name="translate_categoria_outras"> OUTRAS </string>
+    <string name="translate_spinnerOptions_despesa"> DESPESA </string>
+    <string name="translate_spinnerOptions_despesa_com_cartao"> DESPESA COM CARTÃO </string>
+    <string name="translate_spinnerOptions_receita"> RECEITA </string>
+    <string name="translate_adicionar_item"> Adicionar Item </string>
+    <string name="translate_voltar_um_mes">Voltar Um Mês</string>
+    <string name="translate_avançar_um_mes">Avançar Um Mês</string>
+    <string name="translate_visualiar_grafico_por_categoria">Visualizar Gráfico de Gastos Por Categoria</string>
+    <string name="translate_menu_principal"> Menu Principal </string>
+    <string name="translate_lista_de_itens"> Lista de itens </string>
+    <string name="translate_lista_de_cartoes"> Lista de Cartões </string>
+    <string name="translate_lista_de_categorias"> Lista de Categorias </string>
+    <string name="translate_calendario"> Calendário </string>
+    <string name="translate_spinner_selecionar_despesa_ou_receita"> Spinner de Seleção Receita ou Despesa </string>
+    <string name="translate_spinner_selecionar_cartao_credito_ou_debito"> Spinner de Seleção de Cartão </string>
+    <string name="translate_spinner_selecionar_categoria"> Spinner de Seleção de Categoria </string>
+    <string name="translate_dados_do_item"> Detalhes do Item </string>
+    <string name="translate_preencha_cartao_de_credito_ou_debito"> Vá até a página Meus Cartões e cadastre seu primeiro cartão. </string>
+    <string name="translate_o_numero_invalido"> Número inválido precisa ser no formato usando ponto. </string>
+
+
+
+    <string name="translate_nenhum_cartao_adicionado"> Nenhum Cartão adicionado. Adicione um cartão para usar o App. </string>
+    <string name="translate_cadastro_de_cartao_de_credito"> Cadastro de Cartão de Crédito </string>
+    <string name="translate_cadastrar_seu_primeiro_cartao_de_credito"> Deseja cadastrar seu primeiro cartão de crédito? </string>
+
+    <string name="translate_pag_filtrando_por_categorias"> Filtrando por categorias </string>
+    <string name="translate_pag_filtrando_por_despesas_fixas"> Filtrando por despesas fixas </string>
+    <string name="translate_pag_filtrando_por_itens_nao_pagos"> Filtrando por itens não pagos </string>
+    <string name="translate_pag_filtrando_por_hoje"> Filtrando por hoje </string>
+    <string name="translate_pag_filtrando_para_proximos_7_dias"> Filtrando para os próximos 7 dias </string>
+
+    <string name="translate_selecione_o_vencimento"> Selecione o Vencimento: </string>
+    <string name="translate_despesas_nao_pagas"> Despesas Não Pagas: </string>
+    <string name="translate_receitas_nao_recebidas"> Receitas Não Recebidas: </string>
+    <string name="translate_receitas_recebidas"> Receitas Recebidas: </string>
+
+    <string name="translate_despesa_fixa"> Despesa Fixa: </string>
+    <string name="translate_receita_fixa"> Receita Fixa: </string>
+    <string name="translate_liquido_fixo"> Líquido Fixo: </string>
+
+    <string name="translate_dados_do_cartao"> Detalhes do Cartão </string>
+    <string name="translate_dados_da_categoria"> Detalhes da categoria</string>
+</resources>

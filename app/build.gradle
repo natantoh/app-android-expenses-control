@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
+}
+
+android {
+    namespace 'com.brainexpensescontrol.controle_de_despesas'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.brainexpensescontrol.controle_de_despesas"
+        minSdk 29
+        targetSdk 34
+        versionCode 173
+        versionName "2.9.73"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resConfigs "pt","de","de-rDE","en","en-rGB","en-rIN","en-rUS","es","es-rLA", "fr","fr-rCA","fr-rFR", "id", "it","ja","ko-rKR","pt-rBR","th","zh-rCN","vi-rVN" // Inclua os idiomas que você deseja suportar
+
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "AD_UNIT_ID", "\"${localProperties.getProperty('debug_ad_unit_id')}\""
+            buildConfigField "String", "AD_UNIT_ID_BANNER", "\"${localProperties.getProperty('debug_ad_unit_id_banner')}\""
+
+            manifestPlaceholders = [
+                    admobAppId: localProperties.getProperty('admob_app_id')
+            ]
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "AD_UNIT_ID", "\"${localProperties.getProperty('release_ad_unit_id')}\""
+            buildConfigField "String", "AD_UNIT_ID_BANNER", "\"${localProperties.getProperty('release_ad_unit_id_banner')}\""
+
+            manifestPlaceholders = [
+                    admobAppId: localProperties.getProperty('admob_app_id')
+            ]
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.google.android.gms:play-services-ads:22.5.0'
+    implementation platform('com.google.firebase:firebase-bom:32.7.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+    implementation "androidx.work:work-runtime:2.7.0"
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation("com.google.firebase:firebase-appcheck-playintegrity")
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always"
+        android:title="action_custom"
+        android:icon="@drawable/baseline_unfold_less_24"
+        android:id="@+id/action_custom"
+        >
+
+    </item>
+
+    <item
+        app:showAsAction="always"
+        android:title="Menu"
+        android:icon="@drawable/ic_menu_lateral"
+        android:contentDescription="@string/translate_menu_principal"
+        >
+
+        <menu>
+            <item
+                android:id="@+id/filtro_gastos_por_ano"
+                android:title="@string/translate_gasto_por_ano"
+                android:icon="@drawable/ic_filtro_gastos_por_ano"
+                app:showAsAction="never"
+                android:contentDescription="@string/translate_gasto_por_ano"
+                />
+            <item
+                android:id="@+id/filtro_meus_cartoes_de_credito"
+                android:title="@string/translate_meus_cartoes"
+                android:icon="@drawable/ic_filtro_meus_cartoes_de_credito"
+                app:showAsAction="never"
+                android:contentDescription="@string/translate_meus_cartoes"
+                />
+
+            <item
+                android:id="@+id/filtro_minhas_categorias"
+                android:title="@string/translate_minhas_categorias"
+                android:icon="@drawable/icon_menu_categoria"
+                app:showAsAction="never"
+                android:contentDescription="@string/translate_minhas_categorias"
+                />
+
+            <item
+                android:id="@+id/filtro_selecao_moeda"
+                android:title="@string/translate_selecionar_moeda"
+                android:icon="@drawable/icon_selecao_moeda"
+                app:showAsAction="never"
+                android:contentDescription="@string/translate_selecionar_moeda"
+                />
+
+        </menu>
+
+    </item>
+
+
+
+
+</menu>

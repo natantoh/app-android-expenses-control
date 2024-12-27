@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/translate_frase_delete_varios_itens"
+        android:textStyle="bold"
+
+        />
+    <Button
+        android:id="@+id/button_only_this"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/translate_apenas_esta"
+        android:contentDescription="@string/translate_apenas_esta" />
+
+    <Button
+        android:id="@+id/button_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/translate_todas"
+        android:contentDescription="@string/translate_todas" />
+
+    <Button
+        android:id="@+id/button_this_and_future"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/translate_esta_e_proximas"
+        android:contentDescription="@string/translate_esta_e_proximas" />
+</LinearLayout>

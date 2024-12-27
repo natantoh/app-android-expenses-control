@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_pago"
+        android:title="@string/translate_menu_pago_recebido"
+        android:contentDescription="@string/translate_menu_pago_recebido" />
+    <item
+        android:id="@+id/menu_nao_pago"
+        android:title="@string/translate_menu_nao_pago_nao_recebido"
+        android:contentDescription="@string/translate_menu_nao_pago_nao_recebido" />
+
+    <!--
+    <item
+        android:id="@+id/menu_red_flag_notification"
+        android:title="Notificar"
+        android:contentDescription="Notificar" />
+
+    <item
+        android:id="@+id/menu_nao_red_flag_notification"
+        android:title="Não Notificar"
+        android:contentDescription="Não Notificar" />
+    -->
+
+</menu>
+
