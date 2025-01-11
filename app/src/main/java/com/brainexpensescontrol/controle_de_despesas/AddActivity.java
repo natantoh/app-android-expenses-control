@@ -57,8 +57,7 @@ public class AddActivity extends AppCompatActivity {
     Button add_button;
     TextView textViewSelectedDate;
     final Calendar calendar = Calendar.getInstance();
-    private String year_month,selectedDate, yearString;
-    private String selectedOption_despesa_ou_receita = "", selectedOption = "", selectedOption_categoria = "";
+    private String year_month,selectedDate, yearString, selectedOption_despesa_ou_receita = "", selectedOption = "", selectedOption_categoria = "";
     private String parcelado_nao_parcelado = "NAO_PARCELADO", book_pago_ou_nao_pago = "NAO_PAGO", book_red_flag_notification = "NAO_NOTIFICAR", gasto_fixo = "NAO",numero_parcelas;
     private Locale userLocale;
     private Context context;
@@ -77,11 +76,9 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        // INIT - ANUNCIO DO BANNER
         AdView adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
-        // END - ANUNCIO DO BANNER
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         if (!BuildConfig.DEBUG) {
@@ -119,26 +116,21 @@ public class AddActivity extends AppCompatActivity {
 
                 // Verifique se a opção selecionada é "DESPESA COM CARTÃO"
                 if (position == 0) {
-                    // Se "DESPESA COM CARTÃO" estiver selecionado, torne os contêiners cartaoContainer e categoriaContainer visíveis.
                     cartaoContainer.setVisibility(View.VISIBLE);
                     categoriaContainer.setVisibility(View.VISIBLE);
                     selectedOption_despesa_ou_receita = "DESPESA COM CARTÃO";
                 }
                 else if(position == 1){
-                    // Se "DESPESA" estiver selecionado, torne somente o conteiner categoriaContainer visível.
                     cartaoContainer.setVisibility(View.GONE);
                     categoriaContainer.setVisibility(View.VISIBLE);
                     selectedOption_despesa_ou_receita = "DESPESA";
 
                 }
                 else {
-                    // Se "Receita" estiver selecionada, torne o contêiner do cartão invisível
                     cartaoContainer.setVisibility(View.GONE);
                     categoriaContainer.setVisibility(View.GONE);
                     selectedOption_despesa_ou_receita = "RECEITA";
                 }
-                    //selectedOption_despesa_ou_receita = options_despesa_ou_receita[position];
-                    //Toast.makeText(AddActivity.this, "Opção selecionada: " + selectedOption, Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
@@ -369,12 +361,7 @@ public class AddActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Remova todas as vírgulas e o prefixo "R$" ( Somente para Brazil )
-                //      String priceText = prices_input.getText().toString().replaceAll("[R$,$]", "");
-                //     String priceText2 = priceText.replaceAll("[,]", ".");
-
                 String title_2 = title_input.getText().toString().trim();
-
                 String nome_cartao_despesa_ou_receita = selectedOption;
                 String priceText44 = prices_input.getText().toString();
                 String year2 = year_month.substring(0, 4);
@@ -413,10 +400,8 @@ public class AddActivity extends AppCompatActivity {
                 }
 
                 if (parcelarCheckbox.isChecked()) {
-                    // Se o checkbox estiver marcado, `numero_parcelas` deve ser definido pelo campo de entrada
                     numero_parcelas = parcelar_input.getText().toString();
                 } else {
-                    // Se não estiver marcado, definir um valor padrão (por exemplo, "1")
                     numero_parcelas = "1";
                 }
                 if (BuildConfig.DEBUG) {
@@ -456,7 +441,7 @@ public class AddActivity extends AppCompatActivity {
                                 String titulo = title_2 + " " + (i + 1) + "/" + numParcelas;
 
                                 int year = calendar.get(Calendar.YEAR);
-                                int month = calendar.get(Calendar.MONTH) + 1; // Note que os meses são base 0, então adicionamos 1.
+                                int month = calendar.get(Calendar.MONTH) + 1;
                                 int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
 
                                 String formattedMonth = String.format("%02d", month);
@@ -486,10 +471,8 @@ public class AddActivity extends AppCompatActivity {
                             if (!BuildConfig.DEBUG) {
                                 logFirebaseEvent(selectedOption_despesa_ou_receita);
                             }
-                            //double despesa_total_do_cartao_nao_paga = myDB.obterTotalNaoPago(nome_cartao_despesa_ou_receita,"NAO_PAGO");
-                            double despesa_total_do_cartao_nao_paga = myDB.obterSomaTotal(nome_cartao_despesa_ou_receita,"NAO_PAGO");
 
-                            //Log.d("TAG", "O valor de despesa_total_do_cartao_nao_paga é: " + despesa_total_do_cartao_nao_paga);
+                            double despesa_total_do_cartao_nao_paga = myDB.obterSomaTotal(nome_cartao_despesa_ou_receita,"NAO_PAGO");
                             String string_despesa_total_do_cartao_nao_paga = String.valueOf(despesa_total_do_cartao_nao_paga);
                             myDB_cartoes.atualizarLimiteUtilizado(nome_cartao_despesa_ou_receita,string_despesa_total_do_cartao_nao_paga);
                             double limite_do_cartao = myDB_cartoes.obterLimiteDoCartao(nome_cartao_despesa_ou_receita);
@@ -549,9 +532,7 @@ public class AddActivity extends AppCompatActivity {
                             if (!BuildConfig.DEBUG) {
                                 logFirebaseEvent(selectedOption_despesa_ou_receita);
                             }
-                            //double despesa_total_do_cartao_nao_paga = myDB.obterTotalNaoPago(nome_cartao_despesa_ou_receita,"NAO_PAGO");
                             double despesa_total_do_cartao_nao_paga = myDB.obterSomaTotal(nome_cartao_despesa_ou_receita,"NAO_PAGO");
-                            //Log.d("TAG", "O valor de despesa_total_do_cartao_nao_paga é: " + despesa_total_do_cartao_nao_paga);
                             String string_despesa_total_do_cartao_nao_paga = String.valueOf(despesa_total_do_cartao_nao_paga);
                             myDB_cartoes.atualizarLimiteUtilizado(nome_cartao_despesa_ou_receita,string_despesa_total_do_cartao_nao_paga);
                             double limite_do_cartao = myDB_cartoes.obterLimiteDoCartao(nome_cartao_despesa_ou_receita);
@@ -587,7 +568,6 @@ public class AddActivity extends AppCompatActivity {
                                 book_red_flag_notification
                         );
 
-                        //double despesa_total_do_cartao_nao_paga = myDB.obterTotalNaoPago(nome_cartao_despesa_ou_receita,"NAO_PAGO");
                         double despesa_total_do_cartao_nao_paga = myDB.obterSomaTotal(nome_cartao_despesa_ou_receita,"NAO_PAGO");
                         String string_despesa_total_do_cartao_nao_paga = String.valueOf(despesa_total_do_cartao_nao_paga);
                         myDB_cartoes.atualizarLimiteUtilizado(nome_cartao_despesa_ou_receita,string_despesa_total_do_cartao_nao_paga);
@@ -677,7 +657,6 @@ public class AddActivity extends AppCompatActivity {
         }
     }
 
-
     private boolean isValidNumber(String input) {
         try {
             Double.parseDouble(input);
@@ -698,16 +677,6 @@ public class AddActivity extends AppCompatActivity {
             return false;
         }
     }
-
-
-
-
-
-
-
-
-
-
 }
 
 

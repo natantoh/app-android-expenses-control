@@ -202,8 +202,6 @@ public class MinhasCategorias extends AppCompatActivity {
             Log.e("Firebase Analytics", "Firebase Analytics não inicializado corretamente.");
         }
     }
-
-
 }
 
 

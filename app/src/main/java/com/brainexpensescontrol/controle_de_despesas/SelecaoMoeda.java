@@ -34,8 +34,6 @@ public class SelecaoMoeda extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selecao_moeda);
 
-
-
         // ---- INIT Firebase App Check
         // Inicializa o Firebase no contexto atual do aplicativo
         FirebaseApp.initializeApp(/*context=*/ this);
@@ -48,19 +46,6 @@ public class SelecaoMoeda extends AppCompatActivity {
                 PlayIntegrityAppCheckProviderFactory.getInstance());
 
         // ---- END Firebase App Check
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // Inicializar o Firebase Analytics
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);

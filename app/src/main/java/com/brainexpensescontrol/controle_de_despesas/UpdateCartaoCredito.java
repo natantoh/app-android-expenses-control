@@ -42,7 +42,7 @@ public class UpdateCartaoCredito extends AppCompatActivity {
     Button update_button,delete_button;
     TextView textViewSelectedDate;
     final Calendar calendar = Calendar.getInstance();
-    String id, title, prices,date;
+    String id, title, prices;
     private String year_month,selectedDate,authorOld,authorNew;
     private FirebaseAnalytics mFirebaseAnalytics;
 
