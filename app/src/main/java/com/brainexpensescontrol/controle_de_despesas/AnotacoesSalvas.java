@@ -106,7 +106,7 @@ public class AnotacoesSalvas extends AppCompatActivity {
     private LinearLayout buttonsContainer;
     private PopupWindow popupWindow;
     private String nome_cartao,year_monthh;
-    private SubMenu filtroCartoesSubMenu,filtroCategoriasSubMenu,filtroDespesasFixasSubMenu,filtroNaoPagosSubMenu,filtroHojeSubMenu, filtroNext7DaysSubMenu;
+    private SubMenu filtroCartoesSubMenu,filtroCategoriasSubMenu,filtroDespesasFixasSubMenu,filtroReceitasSubMenu,filtroNaoPagosSubMenu,filtroHojeSubMenu, filtroNext7DaysSubMenu;
     private InterstitialAd mInterstitialAd;
     private FirebaseAnalytics mFirebaseAnalytics;
     //private static final long REPEAT_TIME = 4 * 60 * 60 * 1000; // 4 horas em milissegundos
@@ -130,6 +130,9 @@ public class AnotacoesSalvas extends AppCompatActivity {
         String textToDisplay54 = context54.getString(R.string.translate_submenu_filtro_de_cartoes);
         String texto_filtro_categorias = context54.getString(R.string.translate_submenu_filtro_categorias);
         String texto_filtro_despesas_fixas = context54.getString(R.string.translate_submenu_filtro_despesas_fixas);
+
+        String texto_filtro_receitas = context54.getString(R.string.translate_submenu_filtro_receitas);
+
         String texto_filtro_nao_pagos = context54.getString(R.string.translate_submenu_filtro_nao_pagos);
         String texto_filtro_hoje = context54.getString(R.string.translate_submenu_filtro_hoje);
         String texto_filtro_proximos_7_dias = context54.getString(R.string.translate_submenu_filtro_proximos_7_dias);
@@ -145,6 +148,7 @@ public class AnotacoesSalvas extends AppCompatActivity {
         }
 
         filtroDespesasFixasSubMenu = menu.addSubMenu(texto_filtro_despesas_fixas);
+        filtroReceitasSubMenu = menu.addSubMenu(texto_filtro_receitas);
         filtroNaoPagosSubMenu = menu.addSubMenu(texto_filtro_nao_pagos);
         filtroHojeSubMenu = menu.addSubMenu(texto_filtro_hoje);
         filtroNext7DaysSubMenu = menu.addSubMenu(texto_filtro_proximos_7_dias);
@@ -207,6 +211,10 @@ public class AnotacoesSalvas extends AppCompatActivity {
         // Verifica se o item pertence aos outros submenus sem itens dinâmicos
         if (item == filtroDespesasFixasSubMenu.getItem()) {
             startActivity(new Intent(AnotacoesSalvas.this, AnotacoesSalvasFiltroDespesasFixas.class));
+            return true;
+        }
+        if (item == filtroReceitasSubMenu.getItem()) {
+            startActivity(new Intent(AnotacoesSalvas.this, AnotacoesSalvasFiltroReceita.class));
             return true;
         }
         if (item == filtroNaoPagosSubMenu.getItem()) {

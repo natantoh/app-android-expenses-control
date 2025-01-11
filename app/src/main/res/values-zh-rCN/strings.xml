@@ -119,6 +119,7 @@
   <string name="translate_o_numero_invalido">无效的号码需要使用点的格式。</string>
 
 
+  <string name="translate_submenu_filtro_receitas">收入筛选器</string>
 
   <string name="translate_nenhum_cartao_adicionado">尚未添加任何卡片。请添加卡片以使用该应用。</string>
   <string name="translate_cadastro_de_cartao_de_credito">信用卡注册</string>

@@ -96,6 +96,12 @@
             android:parentActivityName=".AnotacoesSalvas"
             />
         <activity
+            android:name=".AnotacoesSalvasFiltroReceita"
+            android:exported="false"
+            android:label="@string/translate_receitas"
+            android:parentActivityName=".AnotacoesSalvas"
+            />
+        <activity
             android:name=".AnotacoesSalvasFiltroHoje"
             android:exported="false"
             android:label="@string/translate_pag_filtrando_por_hoje"

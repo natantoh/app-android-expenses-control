@@ -76,7 +76,7 @@
 
 
 
-
+    <string name="translate_submenu_filtro_receitas">Filtro Receitas</string>
 
     <string name="translate_menu_pago_recebido"> Pago/Recebido </string>
     <string name="translate_menu_nao_pago_nao_recebido"> Não Pago/Não Recebido </string>
