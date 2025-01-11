@@ -258,7 +258,8 @@ class MyDatabaseHelper extends SQLiteOpenHelper {  // Primeiro passo então, é 
 
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String query = "SELECT * FROM " + TABLE_NAME + " WHERE year_month = ? AND Receita_ou_despesa = 'RECEITA' ";
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE year_month = ? AND Receita_ou_despesa = 'RECEITA' ORDER BY date ASC ";
+
         String[] selectionArgs = { year_month };
 
         Cursor cursor = null;

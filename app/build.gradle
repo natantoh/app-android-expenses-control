@@ -16,8 +16,8 @@ android {
         applicationId "com.brainexpensescontrol.controle_de_despesas"
         minSdk 29
         targetSdk 34
-        versionCode 190
-        versionName "2.9.90"
+        versionCode 193
+        versionName "2.9.93"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resConfigs "pt","de","de-rDE","en","en-rGB","en-rIN","en-rUS","es","es-rLA", "fr","fr-rCA","fr-rFR", "id", "it","ja","ko-rKR","pt-rBR","th","zh-rCN","vi-rVN"
