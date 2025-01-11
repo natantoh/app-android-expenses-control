@@ -34,8 +34,8 @@ import com.google.android.gms.ads.MobileAds;
 
 public class AddCategoria extends AppCompatActivity {
 
-    EditText titulo_da_categoria_a_ser_adicionada;  // mudar de title_input para titulo_da_categoria_a_ser_adicionada
-    Button botao_adicionar_categoria;    // mudar add_button para botao_adicionar_categoria
+    EditText titulo_da_categoria_a_ser_adicionada;
+    Button botao_adicionar_categoria;
 
     private Context context;
     private FirebaseAnalytics mFirebaseAnalytics;

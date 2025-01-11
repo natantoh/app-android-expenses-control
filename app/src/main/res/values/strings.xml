@@ -66,13 +66,14 @@
     <string name="translate_submenu_filtro_de_cartoes"> Filtro de Cartões </string>
     <string name="translate_submenu_filtro_categorias"> Filtro Categorias </string>
     <string name="translate_submenu_filtro_despesas_fixas"> Filtros Despesas Fixas </string>
+
+
+    <string name="translate_submenu_filtro_receitas"> Filtro Receitas </string>
+
+
     <string name="translate_submenu_filtro_nao_pagos"> Filtro Não Pagos </string>
     <string name="translate_submenu_filtro_hoje"> Filtro Hoje </string>
     <string name="translate_submenu_filtro_proximos_7_dias"> Filtro Próximos 7 Dias </string>
-
-
-
-
 
 
 

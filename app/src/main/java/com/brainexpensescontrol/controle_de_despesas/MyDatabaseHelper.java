@@ -126,8 +126,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {  // Primeiro passo então, é 
         db.close();
     }
 
-
-
     Cursor readAllData(){
             String query = "SELECT * FROM " + TABLE_NAME;
             SQLiteDatabase db = this.getReadableDatabase();
@@ -256,6 +254,20 @@ class MyDatabaseHelper extends SQLiteOpenHelper {  // Primeiro passo então, é 
         return cursor;
     }
 
+    Cursor readDataFilter_receita_mes(String year_month) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE year_month = ? AND Receita_ou_despesa = 'RECEITA' ";
+        String[] selectionArgs = { year_month };
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(query, selectionArgs);
+        }
+        return cursor;
+    }
+
     Cursor readDataFilter_nao_pagos_e_nao_recebidos_do_mes(String year_month, String pago_ou_nao_pago) {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -288,7 +300,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {  // Primeiro passo então, é 
     Cursor readDataFilter_vencendo_nos_proximos_7_dias(String formattedDate_day, String formattedDate_sixDaysLater) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        // Query SQL para selecionar os dados entre as datas e com 'pago_nao_pago' = 'NAO_PAGO'
         String query = "SELECT * FROM " + TABLE_NAME + " WHERE date BETWEEN ? AND ? AND pago_ou_nao_pago = ? ORDER BY date ASC";
         String[] selectionArgs = {formattedDate_day, formattedDate_sixDaysLater, "NAO_PAGO"};
 
@@ -404,6 +415,28 @@ class MyDatabaseHelper extends SQLiteOpenHelper {  // Primeiro passo então, é 
             }
 
             // Fecha o cursor
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return total;
+    }
+
+    double ReceitaDoMes(String year_month ) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT SUM(prices) FROM " + TABLE_NAME +
+                " WHERE year_month = ? AND Receita_ou_despesa = 'RECEITA'";
+        String[] selectionArgs = { year_month };
+
+        Cursor cursor = null;
+        double total = 0;
+        if (db != null) {
+            cursor = db.rawQuery(query, selectionArgs);
+
+            if (cursor != null && cursor.moveToFirst()) {
+                total = cursor.getDouble(0);
+            }
             if (cursor != null) {
                 cursor.close();
             }

@@ -45,7 +45,6 @@ public class AddCartaoCredito extends AppCompatActivity {
     private Locale userLocale;
     private Context context;
     private FirebaseAnalytics mFirebaseAnalytics;
-
     private AdView adView;
 
     @Override
