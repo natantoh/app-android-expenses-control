@@ -129,7 +129,7 @@ public class AnotacoesSalvasFiltroReceita extends AppCompatActivity {
 
         Context context01 = getApplicationContext();
         String income_total = context01.getString(R.string.translate_receitas);
-        String concatenatedText = income_total + " " + moedaSelecionada + " " + formattedtotalSum;
+        String concatenatedText = income_total + ": " + moedaSelecionada + " " + formattedtotalSum;
         resultTextView1.setText(concatenatedText);
 
         customAdapter = new CustomAdapter(AnotacoesSalvasFiltroReceita.this,AnotacoesSalvasFiltroReceita.this, book_id10, book_title10,book_author10,book_pages10,book_date10,book_despesa_ou_receita10,book_categoria10,book_pago_ou_nao_pago10,book_red_flag_notification10);
@@ -178,7 +178,7 @@ public class AnotacoesSalvasFiltroReceita extends AppCompatActivity {
 
                 Context context011 = getApplicationContext();
                 String texto_receita = context011.getString(R.string.translate_receitas);
-                String concatenatedText11 = texto_receita + " " + moedaSelecionada + " " + formattedtotalSum11;
+                String concatenatedText11 = texto_receita + ": " + moedaSelecionada + " " + formattedtotalSum11;
                 TextView resultTextView11 = findViewById(R.id.textViewReceitaMes);
                 resultTextView11.setText(concatenatedText11);
 
@@ -231,7 +231,7 @@ public class AnotacoesSalvasFiltroReceita extends AppCompatActivity {
 
                 Context context0111 = getApplicationContext();
                 String texto_receitas = context0111.getString(R.string.translate_receitas);
-                String concatenatedText44 = texto_receitas + " " + moedaSelecionada + " " + formattedtotalSum44;
+                String concatenatedText44 = texto_receitas + ": " + moedaSelecionada + " " + formattedtotalSum44;
                 TextView resultTextView44 = findViewById(R.id.textViewReceitaMes);
                 resultTextView44.setText(concatenatedText44);
 
